@@ -1,0 +1,148 @@
+[debug] [2022-12-09T01:56:18.589Z] ----------------------------------------------------------------------
+[debug] [2022-12-09T01:56:18.590Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting,functions
+[debug] [2022-12-09T01:56:18.590Z] CLI Version:   11.17.0
+[debug] [2022-12-09T01:56:18.590Z] Platform:      darwin
+[debug] [2022-12-09T01:56:18.590Z] Node Version:  v16.17.0
+[debug] [2022-12-09T01:56:18.591Z] Time:          Fri Dec 09 2022 07:26:18 GMT+0530 (India Standard Time)
+[debug] [2022-12-09T01:56:18.591Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-09T01:56:18.617Z] Object ".functions" in "firebase.json" has unknown property: {"additionalProperty":"port"}
+[debug] [2022-12-09T01:56:18.617Z] Field ".functions" in "firebase.json" is possibly invalid: should be array
+[debug] [2022-12-09T01:56:18.617Z] Field ".functions" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2022-12-09T01:56:18.619Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-09T01:56:18.619Z] > authorizing via signed-in user (tarun@katsamsoft.com)
+[debug] [2022-12-09T01:56:18.619Z] [iam] checking project mvp--login for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-12-09T01:56:18.619Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mvp--login:testIamPermissions [none]
+[debug] [2022-12-09T01:56:18.620Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mvp--login:testIamPermissions x-goog-quota-user=projects/mvp--login
+[debug] [2022-12-09T01:56:18.620Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mvp--login:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-09T01:56:20.293Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mvp--login:testIamPermissions 200
+[debug] [2022-12-09T01:56:20.294Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mvp--login:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-12-09T01:56:20.294Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/mvp--login/serviceAccounts/mvp--login@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-12-09T01:56:20.294Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/mvp--login/serviceAccounts/mvp--login@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-12-09T01:56:21.852Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/mvp--login/serviceAccounts/mvp--login@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-12-09T01:56:21.852Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/mvp--login/serviceAccounts/mvp--login@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-12-09T01:56:21.854Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login [none]
+[debug] [2022-12-09T01:56:22.418Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login 200
+[debug] [2022-12-09T01:56:22.419Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login {"projectId":"mvp--login","projectNumber":"558551604106","displayName":"mvp google login","name":"projects/mvp--login","resources":{"hostingSite":"mvp--login","storageBucket":"mvp--login.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_6a20fd65-eb68-4644-b7a7-c8315528719a"}
+[info] 
+[info] === Deploying to 'mvp--login'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2022-12-09T01:56:22.423Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login [none]
+[debug] [2022-12-09T01:56:23.244Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login 200
+[debug] [2022-12-09T01:56:23.244Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login {"projectId":"mvp--login","projectNumber":"558551604106","displayName":"mvp google login","name":"projects/mvp--login","resources":{"hostingSite":"mvp--login","storageBucket":"mvp--login.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_6a20fd65-eb68-4644-b7a7-c8315528719a"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2022-12-09T01:56:23.247Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-12-09T01:56:23.247Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/mvp--login
+[debug] [2022-12-09T01:56:23.249Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-12-09T01:56:23.249Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/mvp--login
+[debug] [2022-12-09T01:56:23.249Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/cloudbuild.googleapis.com [none]
+[debug] [2022-12-09T01:56:23.250Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/cloudbuild.googleapis.com x-goog-quota-user=projects/mvp--login
+[debug] [2022-12-09T01:56:23.250Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/artifactregistry.googleapis.com [none]
+[debug] [2022-12-09T01:56:23.250Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/artifactregistry.googleapis.com x-goog-quota-user=projects/mvp--login
+[debug] [2022-12-09T01:56:25.123Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/runtimeconfig.googleapis.com 200
+[debug] [2022-12-09T01:56:25.123Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-12-09T01:56:25.129Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/cloudbuild.googleapis.com 200
+[debug] [2022-12-09T01:56:25.129Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-12-09T01:56:25.132Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/cloudfunctions.googleapis.com 200
+[debug] [2022-12-09T01:56:25.132Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-12-09T01:56:25.135Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/artifactregistry.googleapis.com 200
+[debug] [2022-12-09T01:56:25.136Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mvp--login/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2022-12-09T01:56:25.136Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login/adminSdkConfig [none]
+[debug] [2022-12-09T01:56:25.857Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login/adminSdkConfig 200
+[debug] [2022-12-09T01:56:25.857Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login/adminSdkConfig {"projectId":"mvp--login","storageBucket":"mvp--login.appspot.com","locationId":"asia-south1"}
+[debug] [2022-12-09T01:56:25.859Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/mvp--login/configs [none]
+[debug] [2022-12-09T01:56:26.358Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/mvp--login/configs 200
+[debug] [2022-12-09T01:56:26.358Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/mvp--login/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-12-09T01:56:26.361Z] Validating nodejs source
+[debug] [2022-12-09T01:56:27.000Z] > [functions] package.json contents: {
+  "name": "authorized-https-endpoint-functions",
+  "description": "restrict HTTPS functions to Firebase users",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "date-and-time": "^2.4.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.2.0",
+    "firebase-functions": "^4.0.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-promise": "^4.3.1"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --max-warnings=0 .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "compile": "cp ../../tsconfig.template.json ./tsconfig-compile.json && tsc --project tsconfig-compile.json"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "private": true
+}
+[debug] [2022-12-09T01:56:27.000Z] Building nodejs source
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2022-12-09T01:56:27.002Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-12-09T01:56:27.115Z] Serving at port 9009
+
+[debug] [2022-12-09T01:56:27.260Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-12-09T01:56:27.265Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/tarunjoshi/Desktop/authorized-https-endpoint/functions (100.1 KB) for uploading 
+[debug] [2022-12-09T01:56:27.286Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/mvp--login/locations/-/functions [none]
+[debug] [2022-12-09T01:56:28.135Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/mvp--login/locations/-/functions 200
+[debug] [2022-12-09T01:56:28.136Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/mvp--login/locations/-/functions {"functions":[{"name":"projects/mvp--login/locations/us-central1/functions/app","httpsTrigger":{"url":"https://us-central1-mvp--login.cloudfunctions.net/app","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"app","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"mvp--login@appspot.gserviceaccount.com","updateTime":"2022-12-09T00:48:02.218Z","versionId":"4","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"a2ceebbf173352fd081731a926f0aed46a5de877"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-605793305661.us-central1.cloudfunctions.appspot.com/9a212a72-b19c-4b9c-baa1-b0746075a913.zip","environmentVariables":{"ACCESS":"B85A1FC5A9B9B53522FB","SECRET":"6af8b2b82f3b8ae08b31e567468eda3a180d2d7b8c62ae3aa2baee92dd647a520108174c6e01f462","FIREBASE_CONFIG":"{\"projectId\":\"mvp--login\",\"storageBucket\":\"mvp--login.appspot.com\",\"locationId\":\"asia-south1\"}","GCLOUD_PROJECT":"mvp--login","EVENTARC_CLOUD_EVENT_SOURCE":"projects/mvp--login/locations/us-central1/functions/app"},"runtime":"nodejs16","ingressSettings":"ALLOW_ALL","buildId":"c5201dac-9898-4d92-8128-393288b2de5b","buildName":"projects/558551604106/locations/us-central1/builds/c5201dac-9898-4d92-8128-393288b2de5b","dockerRegistry":"ARTIFACT_REGISTRY"},{"name":"projects/mvp--login/locations/us-central1/functions/onCarbonCreditUpdate","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","resource":"projects/mvp--login/databases/(default)/documents/carboncredit/{documentId}","service":"firestore.googleapis.com","failurePolicy":{}},"status":"ACTIVE","entryPoint":"onCarbonCreditUpdate","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"mvp--login@appspot.gserviceaccount.com","updateTime":"2022-12-09T01:07:04.496Z","versionId":"16","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"7e3be37491b2716bc0ade1593db3f57c9708339e"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-605793305661.us-central1.cloudfunctions.appspot.com/2ed587f2-5eb2-4473-8709-6bc2128a6717.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"mvp--login\",\"storageBucket\":\"mvp--login.appspot.com\",\"locationId\":\"asia-south1\"}","GCLOUD_PROJECT":"mvp--login","EVENTARC_CLOUD_EVENT_SOURCE":"projects/mvp--login/locations/us-central1/functions/onCarbonCreditUpdate"},"runtime":"nodejs16","maxInstances":3000,"ingressSettings":"ALLOW_ALL","buildId":"45220468-8490-43e0-a876-de8a81a8a73a","buildName":"projects/558551604106/locations/us-central1/builds/45220468-8490-43e0-a876-de8a81a8a73a","dockerRegistry":"ARTIFACT_REGISTRY"},{"name":"projects/mvp--login/locations/us-central1/functions/onWebhookCreate","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","resource":"projects/mvp--login/databases/(default)/documents/webhooks/{documentId}","service":"firestore.googleapis.com","failurePolicy":{}},"status":"ACTIVE","entryPoint":"onWebhookCreate","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"mvp--login@appspot.gserviceaccount.com","updateTime":"2022-12-09T01:07:02.508Z","versionId":"1","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"7e3be37491b2716bc0ade1593db3f57c9708339e"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-605793305661.us-central1.cloudfunctions.appspot.com/2ed587f2-5eb2-4473-8709-6bc2128a6717.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"mvp--login\",\"storageBucket\":\"mvp--login.appspot.com\",\"locationId\":\"asia-south1\"}","GCLOUD_PROJECT":"mvp--login","EVENTARC_CLOUD_EVENT_SOURCE":"projects/mvp--login/locations/us-central1/functions/onCarbonCreditUpdate"},"runtime":"nodejs16","maxInstances":3000,"ingressSettings":"ALLOW_ALL","buildId":"c363fc00-ed5c-4aca-9a92-b30feb980f14","buildName":"projects/558551604106/locations/us-central1/builds/c363fc00-ed5c-4aca-9a92-b30feb980f14","dockerRegistry":"ARTIFACT_REGISTRY"}]}
+[debug] [2022-12-09T01:56:28.138Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/mvp--login/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2022-12-09T01:56:30.053Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/mvp--login/locations/-/functions 200
+[debug] [2022-12-09T01:56:30.053Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/mvp--login/locations/-/functions {}
+[debug] [2022-12-09T01:56:30.058Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login [none]
+[debug] [2022-12-09T01:56:30.513Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login 200
+[debug] [2022-12-09T01:56:30.514Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mvp--login {"projectId":"mvp--login","projectNumber":"558551604106","displayName":"mvp google login","name":"projects/mvp--login","resources":{"hostingSite":"mvp--login","storageBucket":"mvp--login.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_6a20fd65-eb68-4644-b7a7-c8315528719a"}
+[debug] [2022-12-09T01:56:30.517Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mvp--login/versions [none]
+[debug] [2022-12-09T01:56:30.517Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mvp--login/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-12-09T01:56:32.385Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mvp--login/versions 200
+[debug] [2022-12-09T01:56:32.385Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mvp--login/versions {"name":"projects/558551604106/sites/mvp--login/versions/41a1463c668aa91c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-12-09T01:56:32.387Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/mvp--login/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2022-12-09T01:56:32.388Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/mvp--login/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2022-12-09T01:56:33.242Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/mvp--login/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2022-12-09T01:56:33.242Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/mvp--login/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-605793305661.us-central1.cloudfunctions.appspot.com/aaeebba1-b731-496e-8e2c-d8b3eec048aa.zip?GoogleAccessId=service-558551604106@gcf-admin-robot.iam.gserviceaccount.com&Expires=1670552793&Signature=nJey72EEjl2XT8omvuU4eB46pRqjtanEElOQVsm7k%2FuHZAA4levpTAUKPYXRI2c2cbLrQYP%2FMgw%2FAiyLXbd7FAA1J9zaTyxQxDFhBXLVNSpP2AjPfLafknBGH3i6EKa9R3czOYmzO0prz9rDu%2BKdv8GPNqAlTH5T%2F0ZhMg8nwI0cJRS3f8%2FFWJV5yEH6CCWKNyJQrxBuuI1xG6kQrsCUlNScuvFGLCCCNBibFCJQRJZmJojORNd%2F59D0aWaA5kmkPNdtlIE3L3Zfy5%2Bhbxh%2BJW9B2FbTai8Sid%2FO7g7SCp096x4M3D7P%2FaYK4E0eE7%2F0pEAewHYN7WbMo4zrh3NUIw%3D%3D"}
+[debug] [2022-12-09T01:56:33.243Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-605793305661.us-central1.cloudfunctions.appspot.com/aaeebba1-b731-496e-8e2c-d8b3eec048aa.zip GoogleAccessId=service-558551604106%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1670552793&Signature=nJey72EEjl2XT8omvuU4eB46pRqjtanEElOQVsm7k%2FuHZAA4levpTAUKPYXRI2c2cbLrQYP%2FMgw%2FAiyLXbd7FAA1J9zaTyxQxDFhBXLVNSpP2AjPfLafknBGH3i6EKa9R3czOYmzO0prz9rDu%2BKdv8GPNqAlTH5T%2F0ZhMg8nwI0cJRS3f8%2FFWJV5yEH6CCWKNyJQrxBuuI1xG6kQrsCUlNScuvFGLCCCNBibFCJQRJZmJojORNd%2F59D0aWaA5kmkPNdtlIE3L3Zfy5%2Bhbxh%2BJW9B2FbTai8Sid%2FO7g7SCp096x4M3D7P%2FaYK4E0eE7%2F0pEAewHYN7WbMo4zrh3NUIw%3D%3D
+[debug] [2022-12-09T01:56:33.243Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-605793305661.us-central1.cloudfunctions.appspot.com/aaeebba1-b731-496e-8e2c-d8b3eec048aa.zip [stream]
+[debug] [2022-12-09T01:56:33.740Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-605793305661.us-central1.cloudfunctions.appspot.com/aaeebba1-b731-496e-8e2c-d8b3eec048aa.zip 200
+[debug] [2022-12-09T01:56:33.740Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-605793305661.us-central1.cloudfunctions.appspot.com/aaeebba1-b731-496e-8e2c-d8b3eec048aa.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  hosting[mvp--login]: beginning deploy... 
+[info] i  hosting[mvp--login]: found 4 files in public 
+[debug] [2022-12-09T01:56:33.744Z] [hosting] uploading with 200 concurrency
+[debug] [2022-12-09T01:56:33.748Z] [hosting] hash cache [cHVibGlj] stored for 4 files
+[debug] [2022-12-09T01:56:33.748Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":2}
+[debug] [2022-12-09T01:56:33.748Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/558551604106/sites/mvp--login/versions/41a1463c668aa91c:populateFiles [none]
+[debug] [2022-12-09T01:56:33.749Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/558551604106/sites/mvp--login/versions/41a1463c668aa91c:populateFiles {"files":{"/firebase-logo.png":"96741a497661ad16b6bd28a60f9fe5318503b26a45e4e47439c262256b7dbf50","/index.html":"8b09e05e0c23e6d9677bb1a31c9dab1f70671ecc47ef8d139480ffb3e69994bc","/main.css":"d84f43134ddee26808cede04fc4fad1c5a872490f58c650fa444fa4c0bd7a43c","/main.js":"08376756ccc2da2c301f636e826f5429e60e5f51580212377948c21c748238bf"}}
+[debug] [2022-12-09T01:56:34.802Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/558551604106/sites/mvp--login/versions/41a1463c668aa91c:populateFiles 200
+[debug] [2022-12-09T01:56:34.802Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/558551604106/sites/mvp--login/versions/41a1463c668aa91c:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/mvp--login/versions/41a1463c668aa91c/files"}
+[debug] [2022-12-09T01:56:34.802Z] [hosting][populate queue][FINAL] {"max":1055,"min":1055,"avg":1055,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1055}
+[debug] [2022-12-09T01:56:34.802Z] [hosting] uploads queued: 0
+[debug] [2022-12-09T01:56:34.802Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1670550994802}
+[info] ✔  hosting[mvp--login]: file upload complete 
+[debug] [2022-12-09T01:56:34.803Z] [hosting] deploy completed after 1061ms
+[info] 
+The following functions are found in your project but do not exist in your local source code:
+	onCarbonCreditUpdate(us-central1)
+	onWebhookCreate(us-central1)
+
+If you are renaming a function or changing its region, it is recommended that you create the new function first before deleting the old one to prevent event loss. For more info, visit https://firebase.google.com/docs/functions/manage-functions#modify
+

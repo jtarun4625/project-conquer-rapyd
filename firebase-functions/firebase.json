@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "public": "public",
+    "port":"5006",
+    "rewrites": [
+      {
+        "source":"**",
+        "function":"app"
+      }
+    ]
+  },
+  "functions":{
+    "port":"5010"
+  }
+}

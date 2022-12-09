@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+    match /users/{userID}{
+    	allow create : if request.auth != null;
+      allow read, write : if request.auth.uid == userID;
+    }
+    match /auctions/{document=**}{
+    	allow create, read: if request.auth != null;
+      allow write: if request.auth.uid == resource.data.userID
+    }
+     match /auctions/{document=**}{
+    	allow create : if request.auth != null;
+      allow read, write : if request.auth.uid == userID;
+    }
+      match /carboncredit/{document=**}{
+      allow read, write ,create : if request.auth != null;
+    }
+    match/bid /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
